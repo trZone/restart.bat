@@ -1,7 +1,7 @@
 @ECHO OFF
 
-REM Set this folder for where emailer.exe is
-Set emailerFolder="C:\Stuff\Emailer"
+
+
 
 ECHO This is sample batch file that can do something useful if rig has problems
 ECHO Rig name: %1   Problem ID: %2
@@ -29,12 +29,11 @@ REM ===================================================
 Set emailerRootPath=%CD%
 Set emailerTimeStamp=%date% %time%
 
-CD /D "%emailerFolder%"
-
+REM ***** Set this folder for where emailer.exe is *****
+CD /D "C:\Stuff\Emailer"
 
 Shutdown /m %1 /f /r /t 0
 
-REM remove the REM from the below line to not email yourself
 REM EXIT
 
 > Emailer_subject.txt ECHO RESTARTING %1 FOR PROBLEM: %Reason%
@@ -51,5 +50,4 @@ CD /D "%emailerRootPath%"
 Set Reason=
 Set emailerRootPath=
 Set emailerTimeStamp=
-
 
