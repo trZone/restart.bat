@@ -1,7 +1,7 @@
 @ECHO OFF
 
 REM Set this folder for where emailer.exe is
-Set emailerFolder = "C:\Stuff\Emailer"
+Set emailerFolder="C:\Stuff\Emailer"
 
 ECHO This is sample batch file that can do something useful if rig has problems
 ECHO Rig name: %1   Problem ID: %2
