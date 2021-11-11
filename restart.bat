@@ -34,7 +34,8 @@ CD /D "%emailerFolder%"
 
 Shutdown /m %1 /f /r /t 0
 
-EXIT
+REM remove the REM from the below line to not email yourself
+REM EXIT
 
 > Emailer_subject.txt ECHO RESTARTING %1 FOR PROBLEM: %Reason%
 
